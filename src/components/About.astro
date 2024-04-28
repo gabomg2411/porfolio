@@ -2,30 +2,42 @@
 import CurvedArrow from "./icons/CurvedArrow.astro";
 ---
 
-<section class="flex justify-center items-center mt-20">
-  <CurvedArrow class="size-32 pt-10 -m-5" />
-  <h2 class="text-2xl">
+<section class="flex justify-center items-center mt-20 px-5 md:px-0">
+  <CurvedArrow class="size-32 hidden md:block" />
+  <h2 class="text-2xl md:text-3xl pb-12 text-pretty">
     Hello! My name is <strong class="text-[#A362FF]">Gabriel Moreno</strong>
   </h2>
 </section>
 
-<section class="flex justify-center items-center mt-2 relative">
+<div class="flex flex-col items-center justify-center px-5 md:px-0 md:flex-row">
   <img
-    class="rounded-full size-28 mt-5 mr-5 z-10"
+    class="rounded-full size-56 md:mr-16"
     src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg"
     alt="profile photo"
   />
-  <img
-    class="rounded-full size-28 mt-5 mr-5 bg-white blur-2xl shadow-2xl absolute left-[400px]"
-    src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg"
-    alt="profile photo"
-  />
-  <h2 class="text-5xl text-wrap opacity-80 max-w-[600px]">
-    I'm Full Stack Developer.
-  </h2>
-  <!-- <p class="text-xl text-wrap opacity-80 max-w-[500px]">
-    I'm a software engineer with a passion for web development. I'm currently
-    working at <strong class="text-[#A362FF]">BBVA</strong> as a full-stack developer.
-    I'm always looking for new challenges and opportunities to learn new things.
-  </p> -->
-</section>
+  <div>
+    <h2
+      class="text-4xl text-pretty opacity-80 pt-12 md:pt-0 md:max-w-[600px] md:text-5xl"
+    >
+      I'm Full Stack Developer.
+    </h2>
+    <p class="text-xl pt-5 text-wrap opacity-80 max-w-[500px]">
+      Currently, I'm a Financial Data Associate Business Execution at <strong
+        class="text-[#1877F2]">BBVA</strong
+      >.
+    </p>
+    <p class="text-xl pt-10 text-wrap opacity-80 max-w-[500px]">
+      Crafting responsive websites where technology meets creativity is what I
+      do best.
+    </p>
+  </div>
+</div>
+
+<style>
+  img {
+    background: #fff;
+    box-shadow:
+      0px 0px 40px 1px #ffffffbe,
+      0px 0px 90px 20px #763cac;
+  }
+</style>
