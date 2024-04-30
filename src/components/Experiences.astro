@@ -37,8 +37,22 @@ const EXPIRENCE = [
 ];
 ---
 
-<section class="flex flex-row justify-center">
+<section class="flex flex-row justify-center relative">
+  <div
+    id="ligth"
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-60 w-32 blur-3xl rounded-full"
+  >
+  </div>
   <div class="relative grid md:grid-cols-2 gap-6 dark:border-gray-700">
     {EXPIRENCE.map((experience) => <ExperienceItem {...experience} />)}
   </div>
 </section>
+
+<style>
+  #ligth {
+    background: #763cac;
+    box-shadow:
+      0px 0px 20px 20px #763cac,
+      0px 0px 50px 50px #320f85;
+  }
+</style>
