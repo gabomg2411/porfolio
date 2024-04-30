@@ -2,11 +2,11 @@
 interface Astro {
   title: string;
   description: string;
-  img: string;
+  img_path: string;
   work_name: string;
 }
 
-const { title, description, img, work_name } = Astro.props;
+const { title, description, img_path, work_name } = Astro.props;
 ---
 
 <article
@@ -21,7 +21,7 @@ const { title, description, img, work_name } = Astro.props;
   </div>
 
   <div class="relative flex flex-row h-full items-center pl-6">
-    {img && <img src={img} alt={title} class=" size-28 md:size-28" />}
+    {img_path && <img src={img_path} alt={title} class=" size-28 md:size-28" />}
     <div
       class="relative z-20 flex h-full select-none flex-col justify-end gap-1 p-4 text-lg md:p-6"
     >
