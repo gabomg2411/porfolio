@@ -1,0 +1,36 @@
+---
+interface Astro {
+  title: string;
+  description: string;
+  img: string;
+  work_name: string;
+}
+
+const { title, description, img, work_name } = Astro.props;
+---
+
+<article
+  class="bg-[#2C1250] max-w-lg shadow-inner shadow-[#492488] relative rounded-xl
+  backdrop-blur-md overflow-hidden
+  group"
+>
+  <div
+    class="absolute bottom-0 top-0 z-10 h-full w-full
+    bg-gradient-to-br from-transparent from-20% via-[#130428]/40 to-[#130428]/70"
+  >
+  </div>
+
+  <div class="relative flex flex-row h-full items-center pl-6">
+    {img && <img src={img} alt={title} class=" size-28 md:size-28" />}
+    <div
+      class="relative z-20 flex h-full select-none flex-col justify-end gap-1 p-4 text-lg md:p-6"
+    >
+      <h2 class="text-2xl text-pretty font-semibold w-auto h-auto">
+        {title} | <strong class="text-purple-400"> {work_name} </strong>
+      </h2>
+      <p class="text-sm text-pretty pt-3">
+        {description}
+      </p>
+    </div>
+  </div>
+</article>
