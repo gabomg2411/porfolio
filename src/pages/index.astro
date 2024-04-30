@@ -1,15 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import About from "../components/About.astro";
+import Experiences from "../components/Experiences.astro";
+import Container from "../components/Container.astro";
 ---
 
 <Layout
 	title="Gabriel's Portfolio - Web Developer"
 	description="My portfolio where I can show my talent as web developer"
 >
-	<About />
-	<main></main>
+	<Container id="about" class="mt-20 px-5 md:px-0">
+		<About />
+	</Container>
+	<Container id="experiences" class="pt-52">
+		<h2 class="text-3xl font-semibold pb-11">Work Experiences</h2>
+		<Experiences />
+	</Container>
 </Layout>
 
 <style></style>
