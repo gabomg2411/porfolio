@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
 import Experiences from "../components/Experiences.astro";
 import Container from "../components/Container.astro";
+import Skils from "../components/Skills.astro";
 ---
 
 <Layout
@@ -16,6 +17,13 @@ import Container from "../components/Container.astro";
 		<h2 class="text-3xl font-semibold pl-10 md:pl-0 pb-11">Work Experiences</h2>
 		<Experiences />
 	</Container>
-</Layout>
+	<Container
+		id="skills"
+		class="pt-80 flex flex-col justify-center items-center"
+	>
+		<p class="pb-7">With these abilities, we can build your site</p>
+		<Skils />
+	</Container>
 
-<style></style>
+	<style></style>
+</Layout>
