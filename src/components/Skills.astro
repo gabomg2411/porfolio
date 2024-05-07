@@ -1,50 +1,9 @@
 ---
-import IconContainer from "./IconContainer.astro";
-import AstroIcon from "./icons/AstroIcon.astro";
-import JsIcon from "./icons/JsIcon.astro";
-import VueIcon from "./icons/VueIcon.astro";
-import CssIcon from "./icons/CssIcon.astro";
-import TailwindIcon from "./icons/TailwindIcon.astro";
-import MysqlIcon from "./icons/MysqlIcon.astro";
-import PythonIcon from "./icons/PythonIcon.astro";
-import FigmaIcon from "./icons/FigmaIcon.astro";
-import ReactIcon from "./icons/ReactIcon.astro";
+import SkillsBackground from "./SkillsBackground.astro";
+import SkillsIcons from "./SkillsIcons.astro";
 ---
 
-<article class="relative">
-  <div
-    class="grid grid-cols-5 gap-4 mb-5 items-center justify-center place-items-center"
-  >
-    <IconContainer>
-      <AstroIcon class="size-6" />
-    </IconContainer>
-    <IconContainer>
-      <JsIcon class="size-6" />
-    </IconContainer>
-    <IconContainer>
-      <VueIcon class="size-6" />
-    </IconContainer>
-    <IconContainer>
-      <CssIcon class="size-6" />
-    </IconContainer>
-    <IconContainer>
-      <TailwindIcon class="size-6" />
-    </IconContainer>
-  </div>
-  <div class="grid grid-cols-4 items-center justify-center place-items-center">
-    <IconContainer>
-      <MysqlIcon class="size-6" />
-    </IconContainer>
-    <IconContainer>
-      <PythonIcon class="size-6" />
-    </IconContainer>
-
-    <IconContainer>
-      <FigmaIcon class="size-6" />
-    </IconContainer>
-
-    <IconContainer>
-      <ReactIcon class="size-6" />
-    </IconContainer>
-  </div>
-</article>
+<section class="relative">
+  <SkillsBackground />
+  <SkillsIcons />
+</section>
