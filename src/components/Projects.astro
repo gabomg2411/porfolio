@@ -1,0 +1,8 @@
+---
+import PROJECTS from "../data/projects";
+import ProjectItem from "./ProjectItem.astro";
+---
+
+<section>
+  {PROJECTS.map((project) => <ProjectItem {...project} />)}
+</section>
