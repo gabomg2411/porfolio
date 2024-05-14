@@ -13,9 +13,16 @@ const { name, description, tags } = Astro.props;
 
 <article class="flex flex-col py-9 relative">
   <h2 class="text-2xl font-semibold text-blue-200/90">{name}</h2>
-  <div class="mt-4 full lg:w-3/5 p-4 bg-slate-400/25 rounded backdrop-blur-sm">
+  <div
+    class="flex flex-row gap-5 mt-4 full lg:w-3/5 p-4 bg-slate-400/25 rounded backdrop-blur-sm z-20"
+  >
     <p class="text-pretty text-white/80">{description}</p>
   </div>
+  <img
+    src={"/porfolio.webp"}
+    alt={"Portfolio"}
+    class="absolute top-0 right-20 z-10 py-12 h-full w-96 rounded"
+  />
   <div class="flex flex-row flex-wrap gap-4 mt-4">
     <ul class="flex flex-row mb-2 gap-x-2">
       {
