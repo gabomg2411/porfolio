@@ -1,0 +1,28 @@
+---
+import SocialPill from "./SocialPill.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
+import GitHubIcon from "./icons/GitHub.astro";
+import EmailIcon from "./icons/Email.astro";
+import IconContainer from "./IconContainer.astro";
+---
+
+<section>
+  <p class="max-w-2xl text-pretty text-white/80">
+    I'm currently looking to join a cross-functional team that values improving
+    people's lives through accessible design. or have a project in mind? Let's
+    connect.
+  </p>
+  <nav class="flex gap-4 mt-8 flex-wrap">
+    <IconContainer
+      href="https://www.linkedin.com/in/gabriel-moreno-gonz%C3%A1lez-740683197/"
+    >
+      <LinkedInIcon class="size-4 md:size-6" />
+    </IconContainer>
+    <IconContainer href="https://github.com/gabomg2411">
+      <GitHubIcon class="size-4 md:size-6" />
+    </IconContainer>
+    <IconContainer href="mailto:gabomg2411@gmailcom">
+      <EmailIcon class="size-4 md:size-6" />
+    </IconContainer>
+  </nav>
+</section>
