@@ -1,5 +1,8 @@
-<span
-  class="flex items-center justify-center rounded-full bg-[#241c30] size-11"
+<a
+  href={Astro.props.href}
+  class="flex items-center justify-center gap-x-2 text-xs md:text-base rounded-full bg-[#241c30] size-11 hover:scale-110 transition"
+  target="_blank"
+  rel="noopener noreferrer"
 >
   <slot />
-</span>
+</a>
