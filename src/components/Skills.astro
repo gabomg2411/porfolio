@@ -1,10 +1,15 @@
 ---
 import SkillsBackground from "./SkillsBackground.astro";
 import SkillsIcons from "./SkillsIcons.astro";
+
+import { getI18n } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18n(currentLocale);
 ---
 
 <section class="relative">
   <SkillsBackground />
   <SkillsIcons class="-mt-32 pl-3" />
-  <p class="-mt-40 text-xl text-center">Building your site with this</p>
+  <p class="-mt-40 text-xl text-center">{i18n.SKILLS_DESCRIPTION}</p>
 </section>

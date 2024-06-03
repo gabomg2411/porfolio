@@ -1,6 +1,6 @@
 import TAGS from "./tags";
 
-const PROJECTS = [
+const PROJECTS_ES = [
   {
     id: 1,
     name: 'Traspasos entre bancas',
@@ -22,4 +22,29 @@ const PROJECTS = [
 
 ];
 
-export default PROJECTS;
+const PROJECTS_EN = [
+  {
+    id: 1,
+    name: 'Transfers between banks',
+    description: 'System to transfer clients to a different bank. Vo.Bo is requested from several figures and a tracking is used to review the status of the transfer',
+    tags: [TAGS.VUE, TAGS.PYTHON, TAGS.GCLOUD]
+  },
+  {
+    id: 2,
+    name: 'Pipeline',
+    description: 'Project for the management of mortgage loans. The credit is updated with status and other fields each time an advance is made with it.',
+    tags: [TAGS.VUE, TAGS.PYTHON, TAGS.GCLOUD]
+  },
+  {
+    id: 3,
+    name: 'Efficiency Dashboard',
+    description: 'Tool to manage and monitor the points and achievement of bankers, offices and divisions of the bank.',
+    tags: [TAGS.VUE, TAGS.PYTHON, TAGS.GCLOUD]
+  },
+];
+
+export const getProjects = (currentLocale) => {
+  if (currentLocale === "en") return PROJECTS_EN;
+  if (currentLocale === "es") return PROJECTS_ES;
+  return PROJECTS_EN
+}

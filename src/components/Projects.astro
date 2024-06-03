@@ -1,6 +1,8 @@
 ---
-import PROJECTS from "../data/projects";
+import { getProjects } from "../data/projects";
 import ProjectItem from "./ProjectItem.astro";
+
+const PROJECTS = getProjects(Astro.currentLocale);
 ---
 
 <section>
