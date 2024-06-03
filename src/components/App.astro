@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
+import Experiences from "../components/Experiences.astro";
+import Container from "../components/Container.astro";
+import Skils from "../components/Skills.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+
+import { getI18n } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18n(currentLocale);
+---
+
+<Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
+  <Container id="about" class="mt-20">
+    <About />
+  </Container>
+  <Container id="experiences" class="pt-52">
+    <h2 class="text-3xl font-semibold pl-10 md:pl-0 pb-11">
+      {i18n.SECTION_TITLE_1}
+    </h2>
+    <Experiences />
+  </Container>
+  <Container
+    id="skills"
+    class="pt-80 flex flex-col justify-center items-center"
+  >
+    <Skils />
+  </Container>
+  <Container id="proyects" class="pt-64">
+    <h2 class="text-3xl font-semibold pl-10 md:pl-0 pb-11">
+      {i18n.SECTION_TITLE_2}
+    </h2>
+    <Projects />
+  </Container>
+  <Container id="contact" class="py-48">
+    <h2 class="text-3xl font-semibold pl-10 md:pl-0 pb-11">
+      {i18n.SECTION_TITLE_3}
+    </h2>
+    <Contact />
+  </Container>
+
+  <style></style>
+</Layout>

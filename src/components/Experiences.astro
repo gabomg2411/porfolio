@@ -1,6 +1,10 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-import EXPERIENCES from "../data/experiences";
+import { getExperiences } from "../data/experiences";
+
+const { currentLocale } = Astro;
+
+const EXPERIENCES = getExperiences(currentLocale);
 ---
 
 <section class="flex flex-row justify-center relative">

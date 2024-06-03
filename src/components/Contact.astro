@@ -3,13 +3,16 @@ import LinkedInIcon from "./icons/LinkedIn.astro";
 import GitHubIcon from "./icons/GitHub.astro";
 import EmailIcon from "./icons/Email.astro";
 import IconContainer from "./IconContainer.astro";
+
+import { getI18n } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18n(currentLocale);
 ---
 
 <section>
   <p class="max-w-2xl text-pretty text-white/80">
-    I'm currently looking to join a cross-functional team that values improving
-    people's lives through accessible design. or have a project in mind? Let's
-    connect.
+    {i18n.CONTACT_DESCRIPTION}
   </p>
   <nav class="flex gap-4 mt-8 flex-wrap">
     <IconContainer

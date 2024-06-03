@@ -1,12 +1,18 @@
 ---
 import CurvedArrow from "./icons/CurvedArrow.astro";
+
+import { getI18n } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18n(currentLocale);
 ---
 
 <section class="flex justify-center items-center">
   <CurvedArrow class="size-32 hidden md:block" />
-  <h2 class="text-2xl md:text-3xl pb-12 text-pretty">
-    Hello! My name is <strong class="text-[#A362FF]">Gabriel Moreno</strong>
-  </h2>
+  <h2
+    class="text-2xl md:text-3xl pb-12 text-pretty"
+    set:html={i18n.ABOUT_NAME}
+  />
 </section>
 
 <div class="flex flex-col items-center justify-center md:flex-row">
@@ -19,16 +25,14 @@ import CurvedArrow from "./icons/CurvedArrow.astro";
     <h2
       class="text-4xl text-pretty opacity-80 pt-12 md:pt-0 md:max-w-[600px] md:text-5xl"
     >
-      I'm Full Stack Developer.
+      {i18n.ABOUT_TITLE}
     </h2>
-    <p class="text-xl pt-5 text-wrap opacity-80 max-w-[500px]">
-      Currently, I'm a Financial Data Associate Business Execution at <strong
-        class="text-[#1877F2]">BBVA</strong
-      >.
-    </p>
+    <p
+      class="text-xl pt-5 text-wrap opacity-80 max-w-[500px]"
+      set:html={i18n.ABOUT_DESCRIPTION}
+    />
     <p class="text-xl pt-10 text-wrap opacity-80 max-w-[500px]">
-      Crafting responsive websites where technology meets creativity is what I
-      do best.
+      {i18n.ABOUT_DESCRIPTION_2}
     </p>
   </div>
 </div>
